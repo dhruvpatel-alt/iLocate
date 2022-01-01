@@ -1,0 +1,9 @@
+.heading{
+    text-align: center;
+    color: #ffd900;
+    margin:2rem 0;
+}
+.heading:hover{
+    color:#000000;
+    background-color:#ffd900;   
+}
