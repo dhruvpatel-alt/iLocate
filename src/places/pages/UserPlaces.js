@@ -14,7 +14,7 @@ function UserPlaces() {
       const fetchPlaces = async () => {
         try {
           const responseData = await sendRequest(
-            `https://ilocatebackend.onrender.com/api/places/user/${userId}`
+            `https://ilocatebackend-kgvh.onrender.com/api/places/user/${userId}`
           );
           setLoadedPlaces(responseData.places);
         } catch (err) {}
