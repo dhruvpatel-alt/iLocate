@@ -11,7 +11,7 @@ const Users =() => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const responseData = await sendRequest('https://ilocatebackend.onrender.com/api/users');
+        const responseData = await sendRequest('https://ilocatebackend-kgvh.onrender.com/api/users');
 
 
         setLoadedUsers(responseData.users);

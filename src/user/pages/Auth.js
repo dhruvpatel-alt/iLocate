@@ -62,7 +62,7 @@ const {isLoading,error,sendRequest,clearError}=useHttpClient();
  console.log(formState.inputs);
     if(isLoginMode){
     try{
-     const responseData=await sendRequest('https://ilocatebackend.onrender.com/api/users/login',"POST",JSON.stringify({
+     const responseData=await sendRequest('https://ilocatebackend-kgvh.onrender.com/api/users/login',"POST",JSON.stringify({
           email:formState.inputs.email.value,
           password:formState.inputs.password.value
         }),{
@@ -77,7 +77,7 @@ console.log(err);
     
     else{
       try{
-        const responseData=await sendRequest('https://ilocatebackend.onrender.com/api/users/signup',"POST",JSON.stringify({
+        const responseData=await sendRequest('https://ilocatebackend-kgvh.onrender.com/api/users/signup',"POST",JSON.stringify({
       name:formState.inputs.name.value,
       email:formState.inputs.email.value,
       password:formState.inputs.password.value
