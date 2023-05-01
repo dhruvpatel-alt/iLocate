@@ -39,7 +39,7 @@ const UpdatePlace = () => {
     const fetchPlace = async () => {
       try {
         const responseData = await sendRequest(
-          `https://ilocatebackend.onrender.com/api/places/${placeId}`
+          `https://ilocatebackend-kgvh.onrender.com/api/places/${placeId}`
         );
         setLoadedPlace(responseData.place);
         setFormData(
