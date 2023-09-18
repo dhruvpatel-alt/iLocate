@@ -11,12 +11,12 @@ const Users =() => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const responseData = await sendRequest('https://ilocatebackend-kgvh.onrender.com/api/users');
-
-
-        setLoadedUsers(responseData.users);
+        const response= await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/api/users`);
+;
+        setLoadedUsers(response.users);
       } catch (err) {
-     console.log(err);
+
+     console.log("error from get user"+ err);
       }
     };
    getUser();

@@ -39,7 +39,7 @@ const UpdatePlace = () => {
     const fetchPlace = async () => {
       try {
         const responseData = await sendRequest(
-          `https://ilocatebackend-kgvh.onrender.com/api/places/${placeId}`
+          `${process.env.REACT_APP_BACKEND_URL}/api/places/${placeId}`
         );
         setLoadedPlace(responseData.place);
         setFormData(
@@ -69,7 +69,7 @@ const UpdatePlace = () => {
   const placeUpdateSubmitHandler =async event => {
     event.preventDefault();
     try{
-      await sendRequest(`https://ilocatebackend-kgvh.onrender.com/api/places/${placeId}`,"PATCH",JSON.stringify({
+      await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/api/places/${placeId}`,"PATCH",JSON.stringify({
             title:formState.inputs.title.value,
             description:formState.inputs.description.value,
             address:formState.inputs.address.value,

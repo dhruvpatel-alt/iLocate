@@ -34,7 +34,7 @@ const DeleteWarning=()=>{
 const DeletePlace=async()=>{
   setShowDeleteWarning(false);
   try{
-    await sendRequest(`https://ilocatebackend-kgvh.onrender.com/api/places/${props.id}`,"DELETE");
+    await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/api/places/${props.id}`,"DELETE");
     props.onDelete(props.id);
           history.push('/'+auth.userId+'/places');
       }catch(err){

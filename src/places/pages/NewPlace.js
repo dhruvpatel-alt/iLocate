@@ -47,7 +47,7 @@ const NewPlace = () => {
       formData.append('address', formState.inputs.address.value);
       formData.append('creator', auth.userId);
       formData.append('image', formState.inputs.image.value);
-      await sendRequest('https://ilocatebackend-kgvh.onrender.com/api/places','POST',formData).then(response => console.log(response));
+      await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/api/places`,'POST',formData).then(response => console.log(response));
             history.push('/');
         }catch(err){
             console.log(err);
